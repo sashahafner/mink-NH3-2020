@@ -1,0 +1,85 @@
+
+R version 3.6.3 (2020-02-29) -- "Holding the Windsock"
+Copyright (C) 2020 The R Foundation for Statistical Computing
+Platform: x86_64-pc-linux-gnu (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+  Natural language support but running in an English locale
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> # Complete mink emission emission
+> # S. Hafner
+> 
+> rm(list = ls())
+> 
+> source('packages.R')
+> source('functions.R')
+> source('emis_sims.R')
+1 
+Untreated simulation . . . .
+Treated simulation . . . .
+2 
+Untreated simulation . . . .
+Treated simulation . . . .
+3 
+Untreated simulation . . . .
+Treated simulation . . . .
+4 
+Untreated simulation . . . .
+Treated simulation . . . .
+5 
+Untreated simulation . . . .
+Treated simulation . . . .
+6 
+Untreated simulation . . . .
+Treated simulation . . . .
+7 
+Untreated simulation . . . .
+Treated simulation . . . .
+8 
+Untreated simulation . . . .
+Treated simulation . . . .
+9 
+Untreated simulation . . . .
+Treated simulation . . . .
+10 
+Untreated simulation . . . .
+Treated simulation . . . .
+11 
+Untreated simulation . . . .
+Treated simulation . . . .
+12 
+Untreated simulation . . . .
+Treated simulation . . . .
+13 
+Untreated simulation . . . .
+Treated simulation . . . .
+14 
+Untreated simulation . . . .
+Treated simulation . . . .
+15 
+Untreated simulation . . . .
+Treated simulation . . . .
+16 
+Untreated simulation . . . .
+$minimum
+[1] -5
+
+$objective
+          H. 
+0.0002340404 
+
+Error in kinSpec(tot = tot.x, temp.c = temp.c, of = "all", ll = ll, ul = ul) : 
+  Around line 540, optimize didn't converge: complete results above, specified limits: -13 -5
+Calls: source ... <Anonymous> -> unlist -> func -> bmodel -> model -> kinSpec
+Execution halted

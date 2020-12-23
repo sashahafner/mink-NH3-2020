@@ -1,0 +1,50 @@
+# Titration of mink slurry
+
+# Databases in /usr/local/share/doc/phreeqc/database
+# But using local here
+DATABASE ../database/Amm.dat 
+
+# Define output file
+SELECTED_OUTPUT
+   -file          ../output/titrat1.sel
+   -totals        Amm C Ca Cl
+   -molalities    Amm AmmH+
+   -equilibrium_phases Calcite Aragonite
+   -saturation_indices Calcite Aragonite CO2(g) Amm(g)
+   -temp          t
+   -dist          f
+   -time          f
+   -step          f
+   -pe            f
+
+# Mink manure
+SOLUTION 1
+  -units    mmol/kgw
+  -temp     15
+  pH         7.5
+  Amm        470
+  C          240
+  Cl           1 -charge
+END
+
+# Reactions and CO2 equilibrium 
+REACTION 1
+  Ca(OH)2 1
+  0.5 moles in 300 steps
+END
+
+EQUILIBRIUM_PHASES 1
+  Aragonite 1 0
+END
+
+# Mink manure titration ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+USE SOLUTION 1
+USE REACTION 1
+END
+
+# Allow aragonite to precipitate ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+USE SOLUTION 1
+USE REACTION 1
+USE EQUILIBRIUM_PHASES 1
+END
+
